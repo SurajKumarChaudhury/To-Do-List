@@ -14,8 +14,16 @@ body {
   font-size: 1.3rem;
   overflow-x: auto; /* allow horizontal scroll if container is wider than viewport */
 }
+/* Ensure handwriting font everywhere, including inputs, buttons, footer */
 body, body * {
   font-family: "Architects Daughter", cursive !important;
+}
+
+input, textarea, button, select {
+  font-family: "Architects Daughter", cursive !important;
+  -webkit-appearance: none; /* prevent Safari from using system font */
+  -moz-appearance: none;
+  appearance: none;
 }
 
 
@@ -151,5 +159,16 @@ footer p {
     width: 90%;        /* take 90% of screen width */
     min-width: auto;   /* allow shrinking */
     padding: 1rem;   /* optional: reduce padding slightly */
+  }
+}
+@media (max-width: 480px) {
+  .form input {
+    font-size: 16px; /* prevents mobile zoom & keeps font */
+  }
+  button span {
+    font-size: 16px;
+  }
+  li, footer p {
+    font-size: 16px;
   }
 }
