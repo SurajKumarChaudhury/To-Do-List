@@ -1,4 +1,11 @@
-/* 🌐 Base styles */
+html {
+  -webkit-text-size-adjust: 100%; 
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
 body {
   background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
   min-height: 100vh;
@@ -12,22 +19,26 @@ body {
   font-family: "Architects Daughter", cursive;
   text-align: center;
   font-size: 1.3rem;
-  overflow-x: auto; /* allow horizontal scroll if container is wider than viewport */
+  overflow-x: auto; 
 }
-/* Ensure handwriting font everywhere, including inputs, buttons, footer */
+
 body, body * {
   font-family: "Architects Daughter", cursive !important;
 }
 
-input, textarea, button, select {
+input, textarea, button, select, option {
   font-family: "Architects Daughter", cursive !important;
-  -webkit-appearance: none; /* prevent Safari from using system font */
+  -webkit-appearance: none; /* prevent iOS default styling */
   -moz-appearance: none;
   appearance: none;
 }
 
+input::placeholder, textarea::placeholder {
+  font-family: "Architects Daughter", cursive !important;
+}
 
-/* Default container for desktop */
+
+
 .container {
   width: 500px;
   min-width: 500px;
@@ -156,9 +167,9 @@ footer p {
 /* Smaller width for phones */
 @media (max-width: 480px) {
   .container {
-    width: 90%;        /* take 90% of screen width */
-    min-width: auto;   /* allow shrinking */
-    padding: 1rem;   /* optional: reduce padding slightly */
+    width: 90%;        
+    min-width: auto;   
+    padding: 1rem;   
   }
 }
 @media (max-width: 480px) {
