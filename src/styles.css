@@ -1,9 +1,10 @@
 html {
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%; /* iOS Safari */
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+
 
 
 body {
@@ -24,18 +25,22 @@ body {
 
 body, body * {
   font-family: "Architects Daughter", cursive !important;
+  line-height: 1.3 !important; /* optional, keeps spacing consistent */
 }
 
 input, textarea, button, select, option {
   font-family: "Architects Daughter", cursive !important;
-  -webkit-appearance: none; /* prevent iOS default styling */
+  -webkit-appearance: none; /* prevent iOS/Android default styling */
   -moz-appearance: none;
   appearance: none;
+  line-height: 1.3 !important;
+  font-size: 16px !important; /* prevents mobile zoom and font jump */
 }
 
 input::placeholder, textarea::placeholder {
   font-family: "Architects Daughter", cursive !important;
 }
+
 
 
 
