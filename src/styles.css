@@ -14,6 +14,9 @@ body {
   font-size: 1.3rem;
   overflow-x: auto; /* allow horizontal scroll if container is wider than viewport */
 }
+body, body * {
+  font-family: "Architects Daughter", cursive !important;
+}
 
 
 /* Default container for desktop */
@@ -149,7 +152,4 @@ footer p {
     min-width: auto;   /* allow shrinking */
     padding: 1rem;   /* optional: reduce padding slightly */
   }
-}
-body, body * {
-  font-family: "Architects Daughter", cursive !important;
 }
